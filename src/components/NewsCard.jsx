@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { AiOutlineEye, AiOutlineShareAlt, AiFillStar } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const NewsCard = (props ={}) => {
   const { news } = props || {};
@@ -26,9 +27,9 @@ const NewsCard = (props ={}) => {
         </div>
         <h3 className="text-lg font-bold text-gray-800 mb-2">{news.title}</h3>
         <p className="text-gray-600 text-sm mb-3">{news.details.slice(0, 100)}...</p>
-        <a href="#" className="text-blue-500 font-semibold text-sm">
+        <Link to={`/news/${news._id}`} className="text-blue-500 font-semibold text-sm">
           Read More
-        </a>
+        </Link>
       </div>
       <div className="px-4 pb-4 flex items-center justify-between text-gray-600 text-sm">
         <div className="flex items-center">
